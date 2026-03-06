@@ -1,0 +1,78 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>...</title>
+  <meta name="description" content="..." />
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HR Automation — Mathew Goings</title>
+<meta name="description" content="HR Automation case study: Campus Tours scheduling and Magenta Sparkle desk drop automation." />
+<style>
+:root{--magenta:#e20074;--dark:#0f172a;--muted:#475569;--bg:#fbfbfd;--card:#fff;--maxw:1100px}
+body{margin:0;font-family:"Segoe UI",system-ui,Arial;background:var(--bg);color:var(--dark);line-height:1.55}
+.wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
+.header{display:flex;align-items:center;gap:18px;margin-bottom:10px}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--magenta),#ff6fa3);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+nav{margin-left:auto}
+nav a{color:var(--magenta);text-decoration:none;margin-left:14px;font-weight:700}
+h1,h2{margin:0}
+h2{font-size:22px;border-left:6px solid var(--magenta);padding-left:12px;margin-bottom:18px}
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 26px rgba(12,16,23,0.05);margin-bottom:16px}
+.small{color:var(--muted)}
+.footer{margin-top:40px;padding:20px;text-align:center;color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="logo">MG</div>
+      <h1 style="margin-left:12px">HR Automation</h1>
+      <nav>
+        <a href="./index.html">Snapshot</a>
+        <a href="./tops.html">TOPS</a>
+        <a href="./hr.html">HR Automation</a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="hr-overview">
+      <h2 id="hr-overview">Campus Tour Automation</h2>
+      <div class="card">
+        <p class="small"><strong>Overview:</strong> End-to-end automated HQ campus scheduling. New hires receive an invite to schedule; confirmations & ambassador notifications are automated. Reschedules are managed via a Meeting Maker Power App that writes back to SharePoint and updates calendar invites in real time. GUID tokens secure each reschedule link for compliance tracking.</p>
+      </div>
+
+      <h2>Magenta Sparkle — Desk Drop Automation</h2>
+      <div class="card">
+        <p class="small"><strong>Overview:</strong> Leader opt-in on employee start triggers a SharePoint writeback and weekly ambassador digests per campus. Eliminates manual coordination and provides an auditable program flow.</p>
+      </div>
+
+      <h2>Mechanics & Architecture</h2>
+      <div class="card">
+        <ul>
+          <li>Workday / Onboard event triggers → distribution list</li>
+          <li>Power Automate flows to populate SharePoint lists</li>
+          <li>Power App for reschedule UX with GUID token mapping</li>
+          <li>Weekly ambassador digests via automated emails</li>
+        </ul>
+      </div>
+
+      <h2>Testimonials</h2>
+      <div class="card">
+        <p class="small">“Mathew led the campus tour automation and Magenta Sparkle desk drop program — saving TA teams time and giving ambassadors clear weekly schedules.” — <strong>Lacey Foster</strong>, HR Program Manager</p>
+      </div>
+
+      <h2>Artifacts</h2>
+      <div class="card">
+        <p class="small">(Add: Power App screenshot, SharePoint schema, sample ambassador digest email)</p>
+      </div>
+
+    </section>
+
+    <footer class="footer">© 2026 Mathew Goings — HR Automation</footer>
+  </div>
+</body>
+</html>
