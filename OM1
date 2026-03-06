@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Optimistic Media | Independent Media Company</title>
+  <meta name="description" content="Independent Media Company launch — first-time author achieving 275% ROI within 14 days." />
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">MG</div>
+      <div>
+        <h1 style="margin:0;">Optimistic Media</h1>
+        <div class="small">Independent Media Company Launch</div>
+      </div>
+
+      <nav>
+        <a href="/mathewgoings-portfolio/">Snapshot</a>
+        <a href="/mathewgoings-portfolio/tops.html">TOPS</a>
+        <a href="/mathewgoings-portfolio/hr.html">HR Automation</a>
+        <a href="/mathewgoings-portfolio/slack-to-teams.html">Slack → Teams</a>
+        <a href="/mathewgoings-portfolio/optimistic-media.html">Optimistic Media</a>
+      </nav>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="section">
+      <h2>Company Overview</h2>
+      <div class="card">
+        <p class="muted">
+          Founded Optimistic Media as an independently funded publishing venture. 
+          Launched first book project managing the full product lifecycle from concept 
+          development through market validation, production, distribution, and revenue execution.
+        </p>
+      </div>
+    </section>
+
+    <!-- STRATEGY -->
+    <section class="section">
+      <h2>Product Development Strategy</h2>
+      <div class="card">
+        <ul>
+          <li>Composed and structured manuscript draft.</li>
+          <li>Conducted structured focus group with five pre-screened reviewers.</li>
+          <li>Reordered and refined content based on qualitative feedback.</li>
+          <li>Validated final manuscript through second focus review prior to publication.</li>
+          <li>Secured ISBN registration and filed copyright with the Library of Congress.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRODUCTION -->
+    <section class="section">
+      <h2>Production & Vendor Management</h2>
+      <div class="card">
+        <ul>
+          <li>Selected Amazon Kindle Direct Publishing (KDP) as print partner.</li>
+          <li>Designed final formatting and publication layout.</li>
+          <li>Managed proofing and quality review process.</li>
+          <li>Executed first print run of 100 units.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MARKETING -->
+    <section class="section">
+      <h2>Marketing & Distribution Strategy</h2>
+      <div class="card">
+        <ul>
+          <li>Launched coordinated social media release campaign.</li>
+          <li>Executed Goodreads marketing strategy.</li>
+          <li>Hosted Goodreads book giveaway competition.</li>
+          <li>Sourced local retailers for physical placement.</li>
+          <li>Leveraged direct-to-consumer distribution channels.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="section">
+      <h2>Financial Performance</h2>
+      <div class="card" style="text-align:center;">
+        <h3 style="margin:0;">275% Return on Investment</h3>
+        <p class="muted">Break-even achieved within 14 days of launch</p>
+      </div>
+
+      <div class="card">
+        <ul>
+          <li>Initial Investment: $400</li>
+          <li>100 units sold at $14.99 per book</li>
+          <li>Gross Revenue: $1,499</li>
+          <li>Net Profit: $1,099</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="section">
+      <h2>Capabilities Demonstrated</h2>
+      <div class="card">
+        <ul>
+          <li>Entrepreneurial initiative</li>
+          <li>Product lifecycle management</li>
+          <li>Market validation & iteration</li>
+          <li>Budget allocation & ROI analysis</li>
+          <li>Vendor sourcing & production management</li>
+          <li>Retail partnership development</li>
+          <li>Marketing strategy execution</li>
+          <li>Independent business launch</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © 2026 Mathew Goings | Optimistic Media
+    </footer>
+
+  </div>
+</body>
+</html>
