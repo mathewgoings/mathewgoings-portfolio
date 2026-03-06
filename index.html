@@ -1,385 +1,99 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>...</title>
+  <meta name="description" content="..." />
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Mathew Goings | Professional Portfolio</title>
-<meta name="description" content="Mathew Goings — enterprise program leader: automation, governance, onboarding transformation, HR automation, and program leadership." />
-
+<title>Mathew Goings — Professional Snapshot</title>
+<meta name="description" content="Mathew Goings — Professional Snapshot: resume, experience, contact." />
 <style>
-  :root{
-    --magenta: #e20074;
-    --dark: #0f172a;
-    --muted: #475569;
-    --card: #ffffff;
-    --bg: #fbfbfd;
-    --maxw: 1100px;
-    --gap-large: 110px; /* ~2 inch vertical spacing */
-    
-    TESTIMONIAL VISUALS & CAROUSEL */
-.testimonial-feature{
-  border-left:0;
-  background: linear-gradient(180deg,#fff,#fff);
-  padding:36px;
-  border-radius:14px;
-  box-shadow:0 18px 40px rgba(12,16,23,0.10);
-  margin-bottom:28px;
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
+:root{
+  --magenta:#e20074; --dark:#0f172a; --muted:#475569; --bg:#fbfbfd; --card:#fff; --maxw:1100px;
 }
-
-/* make the quote text large and prominent */
-.testimonial-feature .quote {
-  font-size:20px;
-  line-height:1.45;
-  font-style:normal;
-  color:var(--dark);
-  flex:1 1 auto;
-}
-
-/* author column to the right */
-.testimonial-feature .meta {
-  min-width:200px;
-  text-align:left;
-}
-.testimonial-feature .meta .name{
-  font-weight:800;
-  font-size:16px;
-  margin-bottom:6px;
-  color:var(--dark);
-}
-.testimonial-feature .meta .role{
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* carousel container */
-.carousel{
-  position:relative;
-  overflow:hidden;
-  border-radius:12px;
-  margin-top:18px;
-}
-
-/* slides wrapper */
-.slides{
-  display:flex;
-  transition:transform 400ms ease;
-  will-change:transform;
-}
-
-/* each slide */
-.slide{
-  min-width:100%;
-  padding:26px;
-  box-sizing:border-box;
-  background:var(--card);
-  border-radius:10px;
-  box-shadow:0 8px 26px rgba(12,16,23,0.05);
-}
-
-/* small quote styling */
-.slide p{margin:0 0 14px 0;color:var(--muted);font-size:15px}
-.slide .name{font-weight:700;color:var(--dark)}
-.slide .role{font-size:13px;color:var(--muted)}
-
-/* controls */
-.carousel-controls{
-  position:absolute;
-  top:8px;
-  right:8px;
-  display:flex;
-  gap:8px;
-}
-.control-btn{
-  background:rgba(255,255,255,0.95);
-  border:1px solid rgba(15,23,42,0.06);
-  padding:6px 10px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:700;
-  color:var(--dark);
-  box-shadow:0 4px 12px rgba(12,16,23,0.06);
-}
-.dots{
-  display:flex;
-  gap:8px;
-  justify-content:center;
-  margin-top:12px;
-}
-.dot{
-  width:9px;height:9px;border-radius:50%;background:#e6e8eb;cursor:pointer;border:0;
-}
-.dot.active{background:var(--magenta)}
-
-/* responsiveness */
-@media(max-width:820px){
-  .testimonial-feature{flex-direction:column}
-  .testimonial-feature .meta{min-width:100%;text-align:left}
-}
-
-  /* Base */
-  html,body{height:100%}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--dark);
-    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.55;
-    font-size:16px;
-  }
-
-  /* Layout */
-  .wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
-  header.brand{display:flex;gap:18px;align-items:center;margin-bottom:18px}
-  .logo{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--magenta),#ff6fa3);color:#fff;font-weight:700;font-size:18px}
-  h1{margin:0;font-size:34px;letter-spacing:-0.4px}
-  .subtitle{color:var(--muted);margin-top:6px;max-width:860px}
-
-  /* hero */
-  .hero{background:var(--card);padding:40px;border-radius:12px;box-shadow:0 12px 30px rgba(12,16,23,0.06);text-align:left}
-  .hero p{margin:12px 0 0 0;font-size:17px;color:var(--muted)}
-
-  /* sections */
-  .section{margin-top:var(--gap-large);margin-bottom:var(--gap-large)}
-  /* make sure About has slightly smaller top gap since it's near hero */
-  .section--about{margin-top:46px}
-
-  h2{
-    margin:0 0 18px 0;
-    font-size:26px;
-    padding-left:12px;
-    border-left:6px solid var(--magenta);
-    line-height:1.1;
-  }
-
-  .card{
-    background:var(--card);
-    padding:22px;
-    border-radius:12px;
-    box-shadow: 0 8px 26px rgba(12,16,23,0.05);
-    margin-bottom:18px;
-  }
-
-  .two-col{display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:start}
-  @media(max-width:980px){.two-col{grid-template-columns:1fr}}
-
-  /* Testimonials */
-  .lead-line{font-size:18px;color:#334155;margin-top:12px;margin-bottom:42px}
-  .testimonial-feature{
-    border-left:6px solid var(--magenta);
-    padding:28px;
-    border-radius:10px;
-    background:linear-gradient(180deg, #fff, #fff);
-    box-shadow:0 12px 30px rgba(12,16,23,0.06);
-    margin-bottom:24px;
-  }
-  .testimonial-feature p{margin:0 0 14px 0;font-size:18px;font-style:italic;color:#0b1220}
-  .testimonial-author{font-weight:700;color:var(--dark);margin-bottom:2px}
-  .testimonial-role{font-size:14px;color:var(--muted)}
-
-  .testimonial-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-  @media(max-width:820px){.testimonial-grid{grid-template-columns:1fr}}
-
-  /* small utility */
-  .muted{color:var(--muted)}
-  .kicker{font-weight:700;color:var(--magenta);font-size:13px;letter-spacing:0.6px}
-  .badge{display:inline-block;padding:8px 14px;background:var(--magenta);color:white;border-radius:999px;font-weight:700;font-size:13px}
-  footer{margin-top:40px;padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
-
-  /* accessibility focus */
-  a:focus, button:focus{outline:3px solid rgba(226,0,116,0.14);outline-offset:3px}
+body{margin:0;font-family:"Segoe UI",system-ui,Arial;background:var(--bg);color:var(--dark);line-height:1.55}
+.wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
+.header{display:flex;align-items:center;gap:18px;margin-bottom:10px}
+.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--magenta),#ff6fa3);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+nav{margin-left:auto}
+nav a{color:var(--magenta);text-decoration:none;margin-left:14px;font-weight:700}
+.hero{background:var(--card);padding:36px;border-radius:12px;box-shadow:0 12px 30px rgba(12,16,23,0.06)}
+h1{margin:0;font-size:32px}
+p.lead{color:var(--muted);margin-top:8px}
+.section{margin-top:60px}
+h2{font-size:22px;margin:0 0 10px 0;border-left:6px solid var(--magenta);padding-left:12px}
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 26px rgba(12,16,23,0.05);margin-bottom:16px}
+.contact{margin-top:14px;color:var(--muted)}
+ul.clean{padding-left:20px;color:var(--muted)}
+.small{font-size:14px;color:var(--muted)}
+footer{margin-top:40px;padding:20px;text-align:center;color:var(--muted)}
 </style>
 </head>
 <body>
-  <div class="wrap" role="main">
-    <!-- header / hero -->
-    <header class="brand" aria-label="page header">
-      <div class="logo" aria-hidden="true">MG</div>
+  <div class="wrap">
+    <header class="header" role="banner">
+      <div class="logo">MG</div>
       <div>
         <h1>Mathew Goings</h1>
-        <div class="subtitle muted">Enterprise program leader specializing in automation, governance infrastructure, onboarding transformation, HR automation, and operational scale.</div>
+        <div class="small">Virtual Training Manager — Automation & Governance</div>
       </div>
+      <nav>
+        <a href="./index.html">Snapshot</a>
+        <a href="./tops.html">TOPS Project</a>
+        <a href="./hr.html">HR Automation</a>
+      </nav>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
-      <h2 id="hero-title" style="border-left:0;padding-left:0;">Professional Snapshot</h2>
-      <p>
-        Designing systems that reduce risk, increase efficiency, and create sustainable cross-functional alignment across Recruiting, HR Programs, and Training.
-      </p>
-      <div style="margin-top:14px">
-        <span class="badge">Virtual Training Manager</span>
-        <span style="margin-left:12px;color:var(--muted);font-size:14px">Automation & Governance</span>
+    <section class="hero" aria-labelledby="snapshot-title">
+      <h2 id="snapshot-title">Professional Snapshot</h2>
+      <p class="lead">Enterprise program leader designing automation systems, governance frameworks, and scalable onboarding processes across Recruiting, HR Programs, and Training. Focused on measurable operational impact, risk mitigation, and cross-functional enablement.</p>
+      <div class="contact small" style="margin-top:12px">
+        Mathew.Goings@t-mobile.com • <a href="#" style="color:var(--magenta);text-decoration:none">LinkedIn</a>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section section--about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
+    <section class="section" aria-labelledby="summary-title">
+      <h2 id="summary-title">Professional Summary</h2>
       <div class="card">
-        <p class="muted">
-          Strategic leader experienced in designing enterprise automation systems, governance frameworks,
-          and onboarding transformations across Hiring, HR Programs, and Training organizations. I translate
-          operational pain points into scalable, sustainable solutions that improve visibility, reduce manual work,
-          and strengthen compliance.
-        </p>
+        <p class="small">Systems thinker with deep experience connecting Workday, Power Platform, SharePoint, and LMS integrations to automate onboarding and reporting at scale. Skilled at stakeholder alignment, SOP creation, and building audit-ready solutions that reduce manual effort and improve time-to-productivity.</p>
+      </div>
+
+      <div class="card" aria-labelledby="experience-title">
+        <h3 id="experience-title" style="margin-top:0">Experience Snapshot</h3>
+
+        <h4 style="margin-bottom:8px">T-Mobile Experience</h4>
+        <ul class="clean">
+          <li><strong>Rochester COE Opening</strong> — Relocated to Rochester to ramp and scale a new call center during the Sprint merger; supported operational buildout, training alignment, and compliance readiness.</li>
+          <li style="margin-top:8px"><strong>Specialized Technical Care</strong> — Six years across product launches (Home Internet, TVision, SyncUp Drive, DIGITS); supported rollouts, provided SME input, and helped iterate on product risk/feature planning.</li>
+        </ul>
+
+        <h4 style="margin-top:14px;margin-bottom:8px">Pre-T-Mobile</h4>
+        <ul class="clean">
+          <li><strong>Project Manager — Five Guys</strong> (2 yrs) — Led openings (3 restaurants): planning, construction, onboarding, P&L/GL, staffing & training.</li>
+          <li style="margin-top:8px"><strong>Area Manager — Denny's</strong> (4 yrs) — Managed operations for 7 Denver-area locations.</li>
+          <li style="margin-top:8px"><strong>Operational Manager — Denny's / Flying J conversions</strong> (2 yrs) — Led conversions and operational stabilization in WY markets (Rock Springs, Laramie, Cheyenne).</li>
+        </ul>
       </div>
     </section>
 
-    <!-- IMPACT & PARTNERSHIP (moved directly after About) -->
-    <section class="section" aria-labelledby="impact-title">
-      <h2 id="impact-title">Impact & Partnership Validation</h2>
-
-      <p class="lead-line"><strong>Transforming onboarding, automation, and governance—trusted across Recruiting, HR Programs, and Training.</strong></p>
-
-      <!-- featured -->
-      <div class="testimonial-feature" role="article" aria-label="Featured testimonial from Lacey Foster">
-        <p>“Mathew has been an incredible partner to our Talent Acquisition Programs team, helping us rethink manual processes and turn them into scalable, automated solutions. Through his work on TOPS automation, Magenta Sparkle onboarding, reporting enhancements, and campus tour workflows, he saved significant time while improving visibility and accuracy. I trust him to drive meaningful operational improvement across teams.”</p>
-        <div class="testimonial-author">Lacey Foster</div>
-        <div class="testimonial-role">HR Program Manager</div>
-      </div>
-
-      <!-- supporting -->
-      <div class="testimonial-grid" role="list">
-        <div class="card" role="listitem">
-          <p class="muted">“Mathew took the time to understand not just the request, but the operational pain points behind it. His automation of TOPS reporting and workflow redesign significantly improved visibility, reduced manual effort, and eliminated roster friction for Recruiting. The impact has been measurable in time saved and improved data accuracy.”</p>
-          <div style="margin-top:10px" class="testimonial-author">Christina T. McHugh</div>
-          <div class="testimonial-role">Recruiting</div>
-        </div>
-
-        <div class="card" role="listitem">
-          <p class="muted">“TOPS was a game changer. What once required constant back-and-forth is now streamlined and automated. Mathew significantly reduced administrative burden and gave Trainers time back to focus on facilitation and performance outcomes.”</p>
-          <div style="margin-top:10px" class="testimonial-author">Joe Folz</div>
-          <div class="testimonial-role">Senior Trainer</div>
-        </div>
-
-        <div class="card" role="listitem">
-          <p class="muted">“By centralizing reporting and reducing communication overload, Mathew allowed trainers to focus on coaching and learner development rather than administrative work. His systems mindset strengthened alignment across teams.”</p>
-          <div style="margin-top:10px" class="testimonial-author">Larissa Turman</div>
-          <div class="testimonial-role">Senior Trainer</div>
-        </div>
-
-        <!-- placeholder for future testimonial -->
-        <div class="card" role="listitem">
-          <p class="muted">Placeholder for additional customer or stakeholder quote — add more testimonials here as you collect them.</p>
-          <div style="margin-top:10px" class="testimonial-author">—</div>
-          <div class="testimonial-role">—</div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TOPS PROGRAM -->
-    <section class="section" aria-labelledby="tops-title">
-      <h2 id="tops-title">TOPS Program Portfolio</h2>
-
+    <section class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title">Core Skills & Tools</h2>
       <div class="card">
-        <h3 style="margin-top:0">CARE New Hire — Onboarding Automation</h3>
-        <p class="muted">Workday-triggered onboarding workflows, improving new hire communication, and streamlining ownership automation of TOPS flows.</p>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0">Conversion Automation — Loyalty, VR, Tech</h3>
-        <p class="muted">Workflow variants and governance checkpoints for Loyalty, Virtual Retail, and Tech conversions — standardizing communicaiton and reducing manual labor.</p>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0">Automated Communication Framework</h3>
-        <p class="muted">Event-driven templates and notification routing to leaders, COE Stakeholders, and trainers — reducing duplicate outreach and improving visibility.</p>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0">Puerto Rico — Regional TOPS Setup</h3>
-        <p class="muted">Regional configuration and enablement to align Puerto Rico conversion classes and onboarding to L&D onboarding standards.</p>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0">Manual Roster Elimination</h3>
-        <p class="muted">Workday/Enboarder-driven roster generation. Reducing wait time and reducing manual repetitive tasks for our recruiting partners</p>
-      </div>
-    </section>
-
-    <!-- HR AUTOMATION -->
-    <section class="section" aria-labelledby="hr-title">
-      <h2 id="hr-title">HR Automation</h2>
-
-      <div class="card">
-        <h3 style="margin-top:0">Campus Tour Automation — End-to-End Scheduling</h3>
-        <p class="muted">Automated HQ campus tour scheduling: new hires receive invites to schedule; confirmations and ambassador notifications are automated; reschedules are performed via a Power App which writes back to SharePoint and updates calendar invites in real time. Each reschedule link contains a unique GUID token for security and compliance tracking.</p>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0">Magenta Sparkle — Desk Drop Program Automation</h3>
-        <p class="muted">Leader opt-in email on employee start; manager inputs write to SharePoint; weekly ambassador emails are automatically sent per campus. Program is auditable and removes manual coordination steps.</p>
-      </div>
-    </section>
-
-    <!-- PREVIOUS EXPERIENCE -->
-    <section class="section" aria-labelledby="prev-title">
-      <h2 id="prev-title">Previous Experience</h2>
-
-     <div class="card">
-  <h3 style="margin-top:0">T-Mobile Experience</h3>
-
-  <ul style="padding-left:20px; margin-top:12px; color:#475569; line-height:1.6;">
-    
-    <li style="margin-bottom:18px;">
-      <strong>Rochester COE Opening</strong> — Relocated to Rochester to help ramp and scale a new call center during the Sprint merger. 
-      Supported operational buildout, training alignment, and compliance readiness to meet enterprise standards during high-growth expansion.
-    </li>
-
-    <li>
-      <strong>Specialized Technical Care</strong> — Six years leading and supporting high-impact product launches and technical initiatives, including T-Mobile Home Internet, TVision, SyncUp Drive, and DIGITS-related products. 
-      Assisted in initial rollout phases, resolved complex customer technical issues, provided risk analysis feedback to project teams, and served as subject matter expert in focus groups to improve product design and drive innovation.
-    </li>
-
-  </ul>
-</div>
-
-          <div class="card">
-            <h3 style="margin-top:0">Pre-T-Mobile Experience</h3>
-            <ul style="padding-left:20px; margin-top:12px; color:#475569; line-height:1.6;">
-
-  <li style="margin-bottom:18px;">
-    <strong>Project Manager — Five Guys Burgers & Fries</strong> (2 Years) | Denver, Colorado  
-    Partnered with Owner Robin Karst to oversee planning, construction, onboarding, staffing, training, budgeting, market analysis, and full P&L / GL management for three new restaurant openings across the Denver metro area. Led operational ramp-up and performance stabilization from launch through sustained growth.
-  </li>
-
-  <li style="margin-bottom:18px;">
-    <strong>Area Manager — Denny’s</strong> (4 Years) | Denver, Colorado  
-    Oversaw operational performance and financial accountability for seven Denver-area restaurant locations, driving execution standards, staffing strategy, and performance management across multi-unit operations.
-  </li>
-
-  <li>
-    <strong>Operational Manager — Denny’s / Flying J Conversions</strong> (2 Years) | Wyoming  
-    Led operational transition and conversion of Flying J Denny’s locations in Rock Springs, Laramie, and Cheyenne following franchise acquisition. Directed performance stabilization, leadership onboarding, and execution alignment during ownership transition.
-  </li>
-
-</ul>
-
-        <aside class="card" aria-label="contact and quick facts">
-          <div class="kicker">Quick facts</div>
-          <ul style="padding-left:18px;margin-top:12px;color:var(--muted);line-height:1.6">
-            <li><strong>Role:</strong> Virtual Training Manager</li>
-            <li><strong>Focus:</strong> Automation, Governance, Onboarding, CAPM Certified.</li>
-            <li><strong>Primary tools:</strong> Workday, Power Automate, Power Apps, SharePoint, T-Mobile Core Systems, Microsoft Office Suite</li>
-            <li><strong>Key Partnerships:</strong> Recruiting, HR Programs, Training, WFM, EUS, Cybersecurity </li>
-          </ul>
-
-          <div style="margin-top:18px">
-            <div style="font-weight:700;margin-bottom:6px">Contact</div>
-            <div style="color:var(--muted);margin-bottom:4px">Mathew.Goings@t-mobile.com</div>
-            <div style="color:var(--muted)"><a href="#" style="color:var(--magenta);text-decoration:none">LinkedIn</a></div>
-          </div>
-        </aside>
+        <ul class="clean">
+          <li>Workday integration, Power Automate, Power Apps, SharePoint, Magenta U</li>
+          <li>Onboarding workflows, SOPs, governance frameworks</li>
+          <li>Cross-functional stakeholder alignment, change management</li>
+        </ul>
       </div>
     </section>
 
     <footer>
-      © 2026 Mathew Goings | Internal Professional Portfolio
+      © 2026 Mathew Goings — Internal Professional Snapshot
     </footer>
   </div>
 </body>
