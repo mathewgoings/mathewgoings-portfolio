@@ -5,3 +5,109 @@
   <meta name="description" content="..." />
   <link rel="stylesheet" href="assets/styles.css">
 </head>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TOPS Program — Mathew Goings</title>
+<meta name="description" content="TOPS Program case study: onboarding automation, conversion streams, reporting and governance." />
+<style>
+:root{--magenta:#e20074;--dark:#0f172a;--muted:#475569;--bg:#fbfbfd;--card:#fff;--maxw:1100px}
+body{margin:0;font-family:"Segoe UI",system-ui,Arial;background:var(--bg);color:var(--dark);line-height:1.55}
+.wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
+.header{display:flex;align-items:center;gap:18px;margin-bottom:10px}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--magenta),#ff6fa3);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+nav{margin-left:auto}
+nav a{color:var(--magenta);text-decoration:none;margin-left:14px;font-weight:700}
+h1,h2{margin:0}
+h2{font-size:22px;border-left:6px solid var(--magenta);padding-left:12px;margin-bottom:18px}
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 26px rgba(12,16,23,0.05);margin-bottom:16px}
+.kicker{color:var(--magenta);font-weight:700;font-size:13px}
+.small{color:var(--muted)}
+.footer{margin-top:40px;padding:20px;text-align:center;color:var(--muted)}
+/* testimonial carousel styles (simple reuse) */
+.carousel{position:relative;overflow:hidden;border-radius:10px}
+.slides{display:flex;transition:transform .4s ease}
+.slide{min-width:100%;padding:20px;background:var(--card)}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.dot{width:9px;height:9px;border-radius:50%;background:#e6e8eb}
+.dot.active{background:var(--magenta)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="logo">MG</div>
+      <h1 style="margin-left:12px">TOPS Program</h1>
+      <nav>
+        <a href="./index.html">Snapshot</a>
+        <a href="./tops.html">TOPS</a>
+        <a href="./hr.html">HR Automation</a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="tops-overview">
+      <h2 id="tops-overview">Overview</h2>
+      <div class="card">
+        <p class="small">Enterprise program to automate CARE onboarding, standardize conversions (Loyalty, VR, Tech), implement reporting governance, reduce roster work, and enable regional rollouts (Puerto Rico).</p>
+      </div>
+
+      <h2>What I Built</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Workday → TOPS workflows</strong> triggered by welcome-letter signatures, with delegate/I-9 rules to avoid locked I-9s.</li>
+          <li><strong>Conversion variants</strong> for Loyalty, VR, and Tech with job-code mapping and governance checkpoints.</li>
+          <li><strong>Reporting governance</strong> separating BOG (escalation) and Weekly Progress (coaching), with standard cadence (Fri → Tue 9am).</li>
+          <li><strong>Roster automation</strong> via Power Automate & SharePoint integration, removing manual roster creation.</li>
+        </ul>
+      </div>
+
+      <h2>Role & Contributions</h2>
+      <div class="card">
+        <p class="small">Architecture, requirements, stakeholder alignment, SOP documentation, partner with IT/HR for build, trainer enablement, and rollout support.</p>
+      </div>
+
+      <h2>Selected Artifacts</h2>
+      <div class="card">
+        <p class="small">(Add screenshots: welcome email, sample weekly report, SharePoint list schema, workflow diagram)</p>
+      </div>
+
+      <h2>Testimonials</h2>
+      <div class="card">
+        <!-- simplified carousel for TOPS page -->
+        <div class="carousel" id="topsSlides">
+          <div class="slides">
+            <div class="slide">
+              <p>“Mathew took the time to understand operational pain points and translated them into scalable TOPS automation — improved visibility and reduced manual effort.”</p>
+              <div class="small"><strong>Christina T. McHugh</strong> — Recruiting</div>
+            </div>
+            <div class="slide">
+              <p>“TOPS transformed how we confirm rosters and reduced trainer admin significantly.”</p>
+              <div class="small"><strong>Joe Folz</strong> — Senior Trainer</div>
+            </div>
+          </div>
+        </div>
+        <div class="dots" id="topsDots"></div>
+      </div>
+    </section>
+
+    <footer class="footer">© 2026 Mathew Goings — TOPS Program</footer>
+  </div>
+
+<script>
+(function(){
+  const wrapper = document.getElementById('topsSlides');
+  if(!wrapper) return;
+  const slides = wrapper.querySelector('.slides');
+  const total = slides.children.length;
+  const dots = document.getElementById('topsDots');
+  let idx=0;
+  for(let i=0;i<total;i++){ const d=document.createElement('button'); d.className='dot'; d.onclick=(()=>{idx=i; slides.style.transform='translateX(-'+(100*i)+'%)'; update();}); dots.appendChild(d); }
+  function update(){ Array.from(dots.children).forEach((n,i)=> n.classList.toggle('active', i===idx)); }
+  setInterval(()=>{ idx=(idx+1)%total; slides.style.transform='translateX(-'+(100*idx)+'%)'; update(); },4000);
+  update();
+})();
+</script>
+</body>
+</html>
