@@ -89,3 +89,8 @@ h2{margin:0 0 18px 0;font-size:26px;padding-left:12px;border-left:6px solid var(
 
 /* accessible focus */
 a:focus, button:focus{outline:3px solid rgba(226,0,116,0.14);outline-offset:3px}
+
+/* site nav (shared) */
+.site-nav{margin-left:auto;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 14px;max-width:640px}
+.site-nav a{margin-left:0}
+@media(max-width:820px){.header{flex-wrap:wrap}.site-nav{margin-left:0;justify-content:flex-start}}
